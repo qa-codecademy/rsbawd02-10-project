@@ -1,0 +1,17 @@
+﻿@using Lamazon.Services.ViewModels
+@model ProductCategoryViewModel
+
+<h2>Create new Product Category</h2>
+
+@using (Html.BeginForm("Create", "ProductCategory", FormMethod.Post))
+{
+    <div>
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control"/>
+    </div>
+
+    <div>
+        <a asp-controller="ProductCategory" asp-action="Index" class="btn btn-default">Cancel</a>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+}

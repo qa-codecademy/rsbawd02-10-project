@@ -1,0 +1,30 @@
+﻿@model List<Lamazon.Services.ViewModels.ProductCategoryViewModel>
+
+<h1>Product categories: </h1>
+@Html.ActionLink("Create", "Create", "ProductCategory")
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Lamazon.Services.ViewModels.ProductCategoryViewModel item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "ProductCategory", new { id = item.Id })
+                    @Html.ActionLink("Delete", "Delete", "ProductCategory", new { id = item.Id })
+                    @Html.ActionLink("Details", "Details", "ProductCategory", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

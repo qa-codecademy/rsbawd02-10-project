@@ -1,0 +1,19 @@
+﻿@using Lamazon.Services.ViewModels
+@model ProductCategoryViewModel
+
+<h2>Edit Product Category</h2>
+
+@using (Html.BeginForm("Edit", "ProductCategory", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Id)
+
+    <div>
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div>
+        <a asp-controller="ProductCategory" asp-action="Index" class="btn btn-default">Cancel</a>
+        <button class="btn btn-success" type="submit">Update</button>
+    </div>
+}
