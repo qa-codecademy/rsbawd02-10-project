@@ -23,9 +23,13 @@ namespace Lamazon.Web
 
             // Add Repositories
             builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
 
             // Add Services
             builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
+            builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IUserService, UserService>();
 
             var app = builder.Build();
 

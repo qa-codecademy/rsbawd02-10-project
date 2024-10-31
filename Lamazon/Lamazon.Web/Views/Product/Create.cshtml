@@ -1,0 +1,38 @@
+﻿@model Lamazon.Services.ViewModels.Product.CreateProductViewModel
+
+<h2>Create new Product</h2>
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post))
+{
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <input asp-for="Description" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageUrl" class="control-label"></label>
+        <input asp-for="ImageUrl" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ProductCategoryId" class="control-label"></label>
+        <select asp-for="ProductCategoryId" class="form-control" asp-items="ViewBag.ProductCategories">
+                <option>Select Product Category</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <a asp-controller="Product" asp-action="Index" class="btn btn-default">Cancel</a>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+}

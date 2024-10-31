@@ -1,0 +1,35 @@
+﻿@using Lamazon.Services.ViewModels.Product;
+@model List<ProductViewModel>
+
+<h1>All products:</h1>
+@Html.ActionLink("Create new Product", "Create", "Product")
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>`
+        @foreach (ProductViewModel item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td>@item.ProductCategoryName</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Product")
+                    @Html.ActionLink("Delete", "Delete", "Product")
+                    @Html.ActionLink("Details", "Details", "Product")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
