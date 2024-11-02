@@ -17,6 +17,8 @@ public class ProductCategoryController : Controller
     [HttpGet]
     public IActionResult Index()
     {
+        var name = User.Claims.FirstOrDefault(x => x.ValueType == System.Security.Claims.ClaimTypes.Name);
+
         return View(_productCategoryService.GetAllProductCategories());
     }
 

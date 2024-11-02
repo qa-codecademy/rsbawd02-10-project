@@ -3,6 +3,7 @@ using Lamazon.DataAccess.Implementations;
 using Lamazon.DataAccess.Interfaces;
 using Lamazon.Services.Implementations;
 using Lamazon.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lamazon.Web
@@ -31,6 +32,14 @@ namespace Lamazon.Web
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IUserService, UserService>();
 
+            builder.Services
+                .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt => 
+                { 
+                    opt.ExpireTimeSpan = TimeSpan.FromDays(1);
+                    opt.LoginPath = "/User/Login";
+                });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -46,6 +55,7 @@ namespace Lamazon.Web
 
             app.UseRouting();
 
+            app.UseAuthentication(); // I OVAJ OVDJE DIO
             app.UseAuthorization();
 
             app.MapControllerRoute(

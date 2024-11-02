@@ -1,22 +1,49 @@
-﻿using Lamazon.DataAccess.Context;
-using Lamazon.DataAccess.Interfaces;
+﻿using Lamazon.DataAccess.Interfaces;
 using Lamazon.Domain.Entities;
 using Lamazon.Services.Interfaces;
 using Lamazon.Services.ViewModels.User;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace Lamazon.Services.Implementations;
 
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
+    private readonly PasswordHasher<User> _passwordHasher;
+
     public UserService(IUserRepository userRepository)
     {
         _userRepository = userRepository;
+        _passwordHasher = new PasswordHasher<User>();
+    }
+
+    public UserViewModel LoginUser(LoginUserViewModel model)
+    {
+        if (model == null)
+            throw new ArgumentNullException("Provided model is null");
+
+        if (string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.Password))
+            throw new ArgumentException("Provided data is not valid");
+
+        User user = _userRepository.GetUserByEmail(model.Email);
+
+        if (user is null)
+            throw new ArgumentNullException("There is no user with that email");
+
+        PasswordVerificationResult verificationResult = 
+            _passwordHasher.VerifyHashedPassword(user, user.Password, model.Password);
+
+        if (verificationResult == PasswordVerificationResult.Failed)
+            throw new Exception("Login credentials do not match!");
+
+        return new UserViewModel()
+        {
+            Id = user.Id,
+            Email = user.Email,
+            FullName = user.FirstName + " " + user.LastName,
+            Username = user.UserName,
+            UserRoleKey = user.Role.Key
+        };
     }
 
     public void RegisterUser(RegisterUserViewModel model)
@@ -39,9 +66,7 @@ public class UserService : IUserService
             UserName = model.UserName,
         };
 
-        // TODO
-        string hashPassword = "ovo je hash password";
-
+        string hashPassword = _passwordHasher.HashPassword(user, model.Password);
         user.Password = hashPassword;
 
         _userRepository.Insert(user);

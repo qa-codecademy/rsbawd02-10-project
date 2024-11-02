@@ -1,12 +1,14 @@
 ﻿using Lamazon.Services.Interfaces;
 using Lamazon.Services.ViewModels;
 using Lamazon.Services.ViewModels.Product;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Lamazon.Web.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
@@ -26,6 +28,7 @@ namespace Lamazon.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult Create() 
         { 
             CreateProductViewModel model = new CreateProductViewModel();
@@ -38,6 +41,7 @@ namespace Lamazon.Web.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult Create([FromForm] CreateProductViewModel model)
         {
             try

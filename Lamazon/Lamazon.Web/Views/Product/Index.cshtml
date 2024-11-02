@@ -2,7 +2,11 @@
 @model List<ProductViewModel>
 
 <h1>All products:</h1>
-@Html.ActionLink("Create new Product", "Create", "Product")
+
+@if (User.IsInRole("ADMIN"))
+{
+    @Html.ActionLink("Create new Product", "Create", "Product")
+}
 
 <table class="table">
     <thead>
