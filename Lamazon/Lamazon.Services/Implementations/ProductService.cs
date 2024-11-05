@@ -13,7 +13,6 @@ namespace Lamazon.Services.Implementations;
 public class ProductService : IProductService
 {
     private readonly IProductRepository _productRepository;
-
     public ProductService(IProductRepository productRepository)
     {
         _productRepository = productRepository;
@@ -53,8 +52,8 @@ public class ProductService : IProductService
             .GetAll()
             .Select(p => new ProductViewModel()
             {
-                Description= p.Description,
-                ImageUrl= p.ImageUrl,
+                Description = p.Description,
+                ImageUrl = p.ImageUrl,
                 Name = p.Name,
                 ProductCategoryId = p.ProductCategoryId,
                 Price = p.Price,
@@ -65,7 +64,26 @@ public class ProductService : IProductService
 
     public ProductViewModel GetProductById(int id)
     {
-        throw new NotImplementedException();
+        if (id <= 0)
+            throw new ArgumentException("The id must be valid!");
+
+        Product product = _productRepository.Get(id);
+
+        if (product == null)
+            throw new Exception($"Product with id not found!");
+
+        ProductViewModel productViewModel = new ProductViewModel()
+        {
+            Id = product.Id,
+            Name = product.Name,
+            Description = product.Description,
+            ImageUrl = product.ImageUrl,
+            Price = product.Price,
+            ProductCategoryId = product.ProductCategoryId,
+            ProductCategoryName = product.ProductCategory?.Name
+        };
+
+        return productViewModel;
     }
 
     public void UpdateProduct(UpdateProductViewModel model)

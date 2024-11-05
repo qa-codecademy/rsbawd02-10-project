@@ -1,3 +1,5 @@
+using Lamazon.Services.Interfaces;
+using Lamazon.Services.ViewModels.Product;
 using Lamazon.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -7,20 +9,25 @@ namespace Lamazon.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IProductService _productService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IProductService productService)
         {
             _logger = logger;
+            _productService = productService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            List<ProductViewModel> allProduct = _productService.GetAllProducts();
+            return View(allProduct);
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult ProductDetails(int id)
         {
-            return View();
+            ProductViewModel model = _productService.GetProductById(id);
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

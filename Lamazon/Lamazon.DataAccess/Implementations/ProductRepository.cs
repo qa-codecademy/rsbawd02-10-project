@@ -36,6 +36,7 @@ public class ProductRepository : IProductRepository
     {
         Product product = _dbContext
             .Products
+            .Include(p => p.ProductCategory)
             .Where(p => p.Id == id)
             .FirstOrDefault();
 
