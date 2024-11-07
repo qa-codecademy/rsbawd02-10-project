@@ -31,6 +31,20 @@
                             </li>
                         }
 
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("CUSTOMER"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark">My orders (TODO)</a>
+                            </li>
+                        }
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-action="UserInfo" asp-controller="Home">My profile (TODO)</a>
+                            </li>
+                        }
+
                     </ul>
 
                    <ul class="navbar-nav ms-auto">
@@ -44,8 +58,28 @@
                             <li class="nav-item">
                                 <a class="btn btn-outline-primary" asp-area="" asp-controller="User" asp-action="Login">Login</a>
                             </li>
-                        }else
+                        }
+                        else
                         {
+                            @if (User.IsInRole("CUSTOMER"))
+                            {
+                                <span class="label">
+                                    <a asp-action="ShoppingCart" asp-controller="Order" class="nav-link text-dark">
+                                        <strong>
+                                            ( Cart Items )
+                                        </strong>
+                                    </a>
+                                </span>
+                            }
+
+                            <span class="label">
+                                <a class="nav-link text-dark">
+                                    <strong>
+                                        @User.Identity.Name
+                                    </strong>
+                                </a>
+                            </span>
+
                             <li class="nav-item">
                                 <a class="btn btn-outline-primary" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
                             </li>
@@ -70,6 +104,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @await Component.InvokeAsync("Notyf")
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

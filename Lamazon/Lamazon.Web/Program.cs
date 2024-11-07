@@ -1,3 +1,5 @@
+using AspNetCoreHero.ToastNotification;
+using AspNetCoreHero.ToastNotification.Extensions;
 using Lamazon.DataAccess.Context;
 using Lamazon.DataAccess.Implementations;
 using Lamazon.DataAccess.Interfaces;
@@ -22,15 +24,26 @@ namespace Lamazon.Web
             {
             });
 
+            builder.Services.AddNotyf(config => 
+            { 
+                config.DurationInSeconds = 10; 
+                config.IsDismissable = true; 
+                config.Position = NotyfPosition.BottomRight; 
+            });
+
             // Add Repositories
             builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
             builder.Services.AddScoped<IProductRepository, ProductRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 
             // Add Services
             builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IOrderItemService, OrderItemService>();
 
             builder.Services
                 .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -55,8 +68,10 @@ namespace Lamazon.Web
 
             app.UseRouting();
 
-            app.UseAuthentication(); // I OVAJ OVDJE DIO
+            app.UseAuthentication();  
             app.UseAuthorization();
+
+            app.UseNotyf();
 
             app.MapControllerRoute(
                 name: "default",
