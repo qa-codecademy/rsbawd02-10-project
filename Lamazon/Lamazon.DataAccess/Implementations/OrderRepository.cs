@@ -34,6 +34,8 @@ namespace Lamazon.DataAccess.Implementations
             Order order = _dbContext
               .Orders
               .Include(o => o.User)
+              .Include(o => o.Items)
+                 .ThenInclude(oi => oi.Product)
               .Where(o => o.IsActive == true)
               .Where(o => o.UserId == userId)
               .FirstOrDefault();
