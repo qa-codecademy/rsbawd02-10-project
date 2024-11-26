@@ -24,6 +24,7 @@ namespace Lamazon.DataAccess.Implementations
             Order order = _dbContext
                 .Orders
                 .Include(o => o.User)
+                .Include(o => o.Items)
                 .FirstOrDefault(o => o.Id == id);
 
             return order;

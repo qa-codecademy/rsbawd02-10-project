@@ -60,7 +60,7 @@ namespace Lamazon.Web.Controllers
 
                 HttpContext.SignInAsync(principal);
 
-                return View("SuccessfullyLogin", user);
+                return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {

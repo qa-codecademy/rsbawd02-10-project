@@ -3,6 +3,7 @@ using Lamazon.Domain.Entities;
 using Lamazon.Services.Interfaces;
 using Lamazon.Services.ViewModels.Order;
 using Lamazon.Services.ViewModels.OrderItem;
+using Lamazon.Services.ViewModels.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,7 +86,31 @@ public class OrderService : IOrderService
 
     public OrderViewModel GetOrderById(int id)
     {
-        throw new NotImplementedException();
+        Order order = _orderRepository.Get(id);
+
+        if (order == null)
+        {
+            return null;
+        }
+
+        return new OrderViewModel()
+        {
+            OrderNumber = order.OrderNumber,
+            CreatedDate = order.OrderDate,
+            TotalPrice = order.TotalPrice,
+            User = new UserViewModel()
+            {
+                FullName = order.User.FirstName + " " + order.User.LastName
+            }
+        };
+    }
+
+    public void SetInactiveOrder(int id)
+    {
+        Order existingActiveOrder = _orderRepository.Get(id);
+        existingActiveOrder.IsActive = false;
+
+        _orderRepository.Update(existingActiveOrder);
     }
 
     public OrderViewModel SubmitOrder(OrderViewModel order)
@@ -102,7 +127,7 @@ public class OrderService : IOrderService
         existingActiveOrder.Country = order.Country;
         existingActiveOrder.PhoneNumber = order.PhoneNumber;
 
-        existingActiveOrder.IsActive = false;
+        //existingActiveOrder.IsActive = false;
 
         _orderRepository.Update(existingActiveOrder);
 

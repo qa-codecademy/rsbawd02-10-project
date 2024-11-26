@@ -1,0 +1,685 @@
+2024-11-16 09:37:13.634 +01:00 [INF] User profile is available. Using 'C:\Users\almir.vuk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-16 09:37:14.075 +01:00 [INF] Now listening on: https://localhost:7265
+2024-11-16 09:37:14.076 +01:00 [INF] Now listening on: http://localhost:5279
+2024-11-16 09:37:14.080 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-16 09:37:14.081 +01:00 [INF] Hosting environment: Development
+2024-11-16 09:37:14.081 +01:00 [INF] Content root path: C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web
+2024-11-16 09:37:14.804 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/ - null null
+2024-11-16 09:37:15.106 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:37:15.161 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:37:16.091 +01:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:37:16.092 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:37:16.092 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:37:17.368 +01:00 [INF] Executed DbCommand (82ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p0].[Id], [p0].[Name]
+FROM [Products] AS [p]
+INNER JOIN [ProductCategories] AS [p0] ON [p].[ProductCategoryId] = [p0].[Id]
+2024-11-16 09:37:17.460 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-16 09:37:18.212 +01:00 [INF] Executed ViewResult - view Index executed in 691.663ms.
+2024-11-16 09:37:18.223 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:37:18.224 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:37:18.226 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web) in 3063.8536ms
+2024-11-16 09:37:18.227 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:37:18.240 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 15.3747ms
+2024-11-16 09:37:18.258 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/ - 200 null text/html; charset=utf-8 3466.8991ms
+2024-11-16 09:37:18.413 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 189.6754ms
+2024-11-16 09:37:23.004 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/User/Login - null null
+2024-11-16 09:37:23.022 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.UserController.Login (Lamazon.Web)'
+2024-11-16 09:37:23.028 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Lamazon.Web.Controllers.UserController (Lamazon.Web).
+2024-11-16 09:37:23.045 +01:00 [INF] Executing ViewResult, running view Login.
+2024-11-16 09:37:23.097 +01:00 [INF] Executed ViewResult - view Login executed in 51.794ms.
+2024-11-16 09:37:23.098 +01:00 [INF] Executed action Lamazon.Web.Controllers.UserController.Login (Lamazon.Web) in 69.9912ms
+2024-11-16 09:37:23.098 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.UserController.Login (Lamazon.Web)'
+2024-11-16 09:37:23.098 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/User/Login - 200 null text/html; charset=utf-8 94.6409ms
+2024-11-16 09:37:23.111 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:37:23.111 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:37:23.121 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 8.6203ms
+2024-11-16 09:37:23.177 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 66.1314ms
+2024-11-16 09:37:26.068 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7265/User/Login - application/x-www-form-urlencoded 216
+2024-11-16 09:37:26.077 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.UserController.Login (Lamazon.Web)'
+2024-11-16 09:37:26.090 +01:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Lamazon.Services.ViewModels.User.LoginUserViewModel) on controller Lamazon.Web.Controllers.UserController (Lamazon.Web).
+2024-11-16 09:37:26.264 +01:00 [INF] Executed DbCommand (93ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Address], [u].[City], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber], [u].[RoleId], [u].[UserName], [r].[Id], [r].[Key], [r].[Name]
+FROM [Users] AS [u]
+INNER JOIN [Roles] AS [r] ON [u].[RoleId] = [r].[Id]
+WHERE [u].[Email] = @__email_0
+2024-11-16 09:37:26.385 +01:00 [INF] AuthenticationScheme: Cookies signed in.
+2024-11-16 09:37:26.386 +01:00 [INF] Executing RedirectResult, redirecting to /.
+2024-11-16 09:37:26.386 +01:00 [INF] Executed action Lamazon.Web.Controllers.UserController.Login (Lamazon.Web) in 295.851ms
+2024-11-16 09:37:26.386 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.UserController.Login (Lamazon.Web)'
+2024-11-16 09:37:26.387 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7265/User/Login - 302 0 null 318.7448ms
+2024-11-16 09:37:26.392 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/ - null null
+2024-11-16 09:37:26.399 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:37:26.400 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:37:26.496 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p0].[Id], [p0].[Name]
+FROM [Products] AS [p]
+INNER JOIN [ProductCategories] AS [p0] ON [p].[ProductCategoryId] = [p0].[Id]
+2024-11-16 09:37:26.497 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-16 09:37:26.504 +01:00 [INF] Executed ViewResult - view Index executed in 6.7367ms.
+2024-11-16 09:37:26.504 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web) in 104.293ms
+2024-11-16 09:37:26.504 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:37:26.505 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/ - 200 null text/html; charset=utf-8 112.729ms
+2024-11-16 09:37:26.520 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:37:26.520 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:37:26.522 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 1.9217ms
+2024-11-16 09:37:26.645 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.7863ms
+2024-11-16 09:37:31.720 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/ShoppingCart - null null
+2024-11-16 09:37:31.734 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:37:31.737 +01:00 [INF] Route matched with {action = "ShoppingCart", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShoppingCart() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:37:31.855 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:37:31.883 +01:00 [INF] Executing ViewResult, running view ShoppingCart.
+2024-11-16 09:37:31.903 +01:00 [INF] Executed ViewResult - view ShoppingCart executed in 20.2569ms.
+2024-11-16 09:37:31.903 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web) in 165.9347ms
+2024-11-16 09:37:31.904 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:37:31.904 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/ShoppingCart - 200 null text/html; charset=utf-8 183.7512ms
+2024-11-16 09:37:31.949 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:37:31.949 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:37:31.961 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 12.0091ms
+2024-11-16 09:37:32.011 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.0038ms
+2024-11-16 09:37:34.120 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/Summary - null null
+2024-11-16 09:37:34.128 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:37:34.130 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:37:34.203 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:37:34.204 +01:00 [INF] Executing ViewResult, running view Summary.
+2024-11-16 09:37:34.237 +01:00 [INF] Executed ViewResult - view Summary executed in 33.5157ms.
+2024-11-16 09:37:34.237 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 106.6556ms
+2024-11-16 09:37:34.237 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:37:34.238 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/Summary - 200 null text/html; charset=utf-8 117.6664ms
+2024-11-16 09:37:34.249 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:37:34.251 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:37:34.255 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 5.287ms
+2024-11-16 09:37:34.310 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.5002ms
+2024-11-16 09:37:38.547 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7265/Order/Summary - application/x-www-form-urlencoded 531
+2024-11-16 09:37:38.569 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:37:38.577 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary(Lamazon.Services.ViewModels.Order.OrderViewModel) on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:37:38.672 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [OrderItems] AS [o0] ON [t].[Id] = [o0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0]
+2024-11-16 09:37:38.859 +01:00 [INF] Executed DbCommand (99ms) [Parameters=[@p11='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Orders] SET [Address] = @p0, [City] = @p1, [Country] = @p2, [IsActive] = @p3, [OrderDate] = @p4, [OrderNumber] = @p5, [PhoneNumber] = @p6, [PostalCode] = @p7, [ShippingUserFullName] = @p8, [TotalPrice] = @p9, [UserId] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+2024-11-16 09:37:38.929 +01:00 [INF] Executed DbCommand (64ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:37:42.534 +01:00 [ERR] Internal Server Error happened
+2024-11-16 09:37:42.536 +01:00 [INF] Executing RedirectResult, redirecting to /Home/Error.
+2024-11-16 09:37:42.536 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 3958.8854ms
+2024-11-16 09:37:42.536 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:37:42.536 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7265/Order/Summary - 302 0 null 3991.1163ms
+2024-11-16 09:37:42.541 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Home/Error - null null
+2024-11-16 09:37:42.546 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:37:42.548 +01:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:37:42.553 +01:00 [INF] Executing ViewResult, running view Error.
+2024-11-16 09:37:42.560 +01:00 [INF] Executed ViewResult - view Error executed in 7.1145ms.
+2024-11-16 09:37:42.560 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web) in 11.4997ms
+2024-11-16 09:37:42.560 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:37:42.560 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Home/Error - 200 null text/html; charset=utf-8 19.2492ms
+2024-11-16 09:37:42.572 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:37:42.572 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:37:42.573 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 1.1107ms
+2024-11-16 09:37:42.590 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.1767ms
+2024-11-16 09:40:08.523 +01:00 [INF] User profile is available. Using 'C:\Users\almir.vuk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-16 09:40:08.936 +01:00 [INF] Now listening on: https://localhost:7265
+2024-11-16 09:40:08.936 +01:00 [INF] Now listening on: http://localhost:5279
+2024-11-16 09:40:08.939 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-16 09:40:08.940 +01:00 [INF] Hosting environment: Development
+2024-11-16 09:40:08.940 +01:00 [INF] Content root path: C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web
+2024-11-16 09:40:11.799 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/ - null null
+2024-11-16 09:40:12.107 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:40:12.161 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:40:12.834 +01:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:40:12.834 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:40:12.834 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:40:14.052 +01:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p0].[Id], [p0].[Name]
+FROM [Products] AS [p]
+INNER JOIN [ProductCategories] AS [p0] ON [p].[ProductCategoryId] = [p0].[Id]
+2024-11-16 09:40:14.327 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-16 09:40:14.616 +01:00 [INF] Executed ViewResult - view Index executed in 295.8247ms.
+2024-11-16 09:40:14.622 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web) in 2459.4735ms
+2024-11-16 09:40:14.623 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:40:14.719 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:40:14.839 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/ - 200 null text/html; charset=utf-8 3042.8337ms
+2024-11-16 09:40:14.842 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:40:14.847 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 128.463ms
+2024-11-16 09:40:14.954 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.7291ms
+2024-11-16 09:40:19.873 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/ShoppingCart - null null
+2024-11-16 09:40:19.901 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:40:19.906 +01:00 [INF] Route matched with {action = "ShoppingCart", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShoppingCart() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:40:20.105 +01:00 [INF] Executed DbCommand (97ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:40:20.156 +01:00 [INF] Executing ViewResult, running view ShoppingCart.
+2024-11-16 09:40:20.191 +01:00 [INF] Executed ViewResult - view ShoppingCart executed in 35.9652ms.
+2024-11-16 09:40:20.192 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web) in 286.0139ms
+2024-11-16 09:40:20.192 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:40:20.194 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/ShoppingCart - 200 null text/html; charset=utf-8 321.17ms
+2024-11-16 09:40:20.358 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:40:20.358 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:40:20.365 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 6.7962ms
+2024-11-16 09:40:20.426 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.083ms
+2024-11-16 09:40:22.348 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/Summary - null null
+2024-11-16 09:40:22.367 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:40:22.368 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:40:22.479 +01:00 [INF] Executed DbCommand (68ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:40:22.481 +01:00 [INF] Executing ViewResult, running view Summary.
+2024-11-16 09:40:22.539 +01:00 [INF] Executed ViewResult - view Summary executed in 58.8533ms.
+2024-11-16 09:40:22.539 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 171.2497ms
+2024-11-16 09:40:22.539 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:40:22.540 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/Summary - 200 null text/html; charset=utf-8 191.4804ms
+2024-11-16 09:40:22.553 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:40:22.553 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:40:22.555 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 2.6931ms
+2024-11-16 09:40:22.637 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.9124ms
+2024-11-16 09:40:26.181 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7265/Order/Summary - application/x-www-form-urlencoded 531
+2024-11-16 09:40:26.187 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:40:26.205 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary(Lamazon.Services.ViewModels.Order.OrderViewModel) on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:40:26.316 +01:00 [INF] Executed DbCommand (67ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [OrderItems] AS [o0] ON [t].[Id] = [o0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0]
+2024-11-16 09:40:26.499 +01:00 [INF] Executed DbCommand (73ms) [Parameters=[@p11='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Orders] SET [Address] = @p0, [City] = @p1, [Country] = @p2, [IsActive] = @p3, [OrderDate] = @p4, [OrderNumber] = @p5, [PhoneNumber] = @p6, [PostalCode] = @p7, [ShippingUserFullName] = @p8, [TotalPrice] = @p9, [UserId] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+2024-11-16 09:40:26.577 +01:00 [INF] Executed DbCommand (70ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:40:30.836 +01:00 [ERR] Internal Server Error happened
+2024-11-16 09:40:30.840 +01:00 [INF] Executing RedirectResult, redirecting to /Home/Error.
+2024-11-16 09:40:30.840 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 4635.6331ms
+2024-11-16 09:40:30.840 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:40:30.841 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7265/Order/Summary - 302 0 null 4659.5715ms
+2024-11-16 09:40:30.847 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Home/Error - null null
+2024-11-16 09:40:30.851 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:40:30.852 +01:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:40:30.856 +01:00 [INF] Executing ViewResult, running view Error.
+2024-11-16 09:40:30.863 +01:00 [INF] Executed ViewResult - view Error executed in 7.5182ms.
+2024-11-16 09:40:30.863 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web) in 10.3103ms
+2024-11-16 09:40:30.863 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:40:30.863 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Home/Error - 200 null text/html; charset=utf-8 16.7398ms
+2024-11-16 09:40:30.880 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:40:30.880 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:40:30.881 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 1.3012ms
+2024-11-16 09:40:30.907 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.9509ms
+2024-11-16 09:42:08.295 +01:00 [INF] User profile is available. Using 'C:\Users\almir.vuk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-16 09:42:08.655 +01:00 [INF] Now listening on: https://localhost:7265
+2024-11-16 09:42:08.655 +01:00 [INF] Now listening on: http://localhost:5279
+2024-11-16 09:42:08.657 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-16 09:42:08.658 +01:00 [INF] Hosting environment: Development
+2024-11-16 09:42:08.658 +01:00 [INF] Content root path: C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web
+2024-11-16 09:42:09.115 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/ - null null
+2024-11-16 09:42:09.299 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:42:09.341 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:42:10.057 +01:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:42:10.057 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:42:10.057 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:42:11.693 +01:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p0].[Id], [p0].[Name]
+FROM [Products] AS [p]
+INNER JOIN [ProductCategories] AS [p0] ON [p].[ProductCategoryId] = [p0].[Id]
+2024-11-16 09:42:11.775 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-16 09:42:12.133 +01:00 [INF] Executed ViewResult - view Index executed in 320.3056ms.
+2024-11-16 09:42:12.156 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web) in 2813.6935ms
+2024-11-16 09:42:12.157 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:42:12.222 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/ - 200 null text/html; charset=utf-8 3106.8435ms
+2024-11-16 09:42:12.225 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:42:12.227 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:42:12.241 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 16.3049ms
+2024-11-16 09:42:12.500 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 274.045ms
+2024-11-16 09:42:14.369 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/ShoppingCart - null null
+2024-11-16 09:42:14.406 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:42:14.409 +01:00 [INF] Route matched with {action = "ShoppingCart", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShoppingCart() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:42:14.747 +01:00 [INF] Executed DbCommand (128ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:42:14.813 +01:00 [INF] Executing ViewResult, running view ShoppingCart.
+2024-11-16 09:42:15.089 +01:00 [INF] Executed ViewResult - view ShoppingCart executed in 278.8314ms.
+2024-11-16 09:42:15.090 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web) in 680.1638ms
+2024-11-16 09:42:15.090 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:42:15.090 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/ShoppingCart - 200 null text/html; charset=utf-8 721.7811ms
+2024-11-16 09:42:15.097 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:42:15.097 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:42:15.099 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 2.0244ms
+2024-11-16 09:42:15.144 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.2102ms
+2024-11-16 09:42:17.044 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/Summary - null null
+2024-11-16 09:42:17.060 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:42:17.061 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:42:17.173 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:42:17.174 +01:00 [INF] Executing ViewResult, running view Summary.
+2024-11-16 09:42:17.230 +01:00 [INF] Executed ViewResult - view Summary executed in 56.3929ms.
+2024-11-16 09:42:17.230 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 169.217ms
+2024-11-16 09:42:17.230 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:42:17.231 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/Summary - 200 null text/html; charset=utf-8 186.91ms
+2024-11-16 09:42:17.243 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:42:17.244 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:42:17.249 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 4.268ms
+2024-11-16 09:42:17.302 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.1706ms
+2024-11-16 09:42:20.716 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7265/Order/Summary - application/x-www-form-urlencoded 531
+2024-11-16 09:42:20.723 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:42:20.734 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary(Lamazon.Services.ViewModels.Order.OrderViewModel) on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:42:20.844 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [OrderItems] AS [o0] ON [t].[Id] = [o0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0]
+2024-11-16 09:42:21.010 +01:00 [INF] Executed DbCommand (84ms) [Parameters=[@p11='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Orders] SET [Address] = @p0, [City] = @p1, [Country] = @p2, [IsActive] = @p3, [OrderDate] = @p4, [OrderNumber] = @p5, [PhoneNumber] = @p6, [PostalCode] = @p7, [ShippingUserFullName] = @p8, [TotalPrice] = @p9, [UserId] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+2024-11-16 09:42:21.082 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:42:23.217 +01:00 [ERR] Internal Server Error happened
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lamazon.Web.Controllers.OrderController.Summary(OrderViewModel model) in C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web\Controllers\OrderController.cs:line 82
+2024-11-16 09:42:23.262 +01:00 [INF] Executing RedirectResult, redirecting to /Home/Error.
+2024-11-16 09:42:23.262 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 2528.6502ms
+2024-11-16 09:42:23.262 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:42:23.263 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7265/Order/Summary - 302 0 null 2546.9938ms
+2024-11-16 09:42:23.267 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Home/Error - null null
+2024-11-16 09:42:23.270 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:42:23.273 +01:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:42:23.276 +01:00 [INF] Executing ViewResult, running view Error.
+2024-11-16 09:42:23.282 +01:00 [INF] Executed ViewResult - view Error executed in 7.1163ms.
+2024-11-16 09:42:23.282 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web) in 9.4711ms
+2024-11-16 09:42:23.282 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:42:23.283 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Home/Error - 200 null text/html; charset=utf-8 15.8537ms
+2024-11-16 09:42:23.294 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:42:23.294 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:42:23.295 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 0.7792ms
+2024-11-16 09:42:23.311 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.5236ms
+2024-11-16 09:44:16.800 +01:00 [INF] User profile is available. Using 'C:\Users\almir.vuk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-16 09:44:16.993 +01:00 [INF] Now listening on: https://localhost:7265
+2024-11-16 09:44:16.993 +01:00 [INF] Now listening on: http://localhost:5279
+2024-11-16 09:44:16.995 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-16 09:44:16.996 +01:00 [INF] Hosting environment: Development
+2024-11-16 09:44:16.996 +01:00 [INF] Content root path: C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web
+2024-11-16 09:44:17.468 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/ - null null
+2024-11-16 09:44:17.634 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:44:17.664 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:44:18.250 +01:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:44:18.250 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:44:18.250 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:44:19.476 +01:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p0].[Id], [p0].[Name]
+FROM [Products] AS [p]
+INNER JOIN [ProductCategories] AS [p0] ON [p].[ProductCategoryId] = [p0].[Id]
+2024-11-16 09:44:19.560 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-16 09:44:20.133 +01:00 [INF] Executed ViewResult - view Index executed in 531.9442ms.
+2024-11-16 09:44:20.151 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:44:20.167 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:44:20.176 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web) in 2511.3423ms
+2024-11-16 09:44:20.178 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:44:20.184 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 30.1608ms
+2024-11-16 09:44:20.221 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/ - 200 null text/html; charset=utf-8 2760.574ms
+2024-11-16 09:44:20.289 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 121.579ms
+2024-11-16 09:44:22.137 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/ShoppingCart - null null
+2024-11-16 09:44:22.168 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:44:22.172 +01:00 [INF] Route matched with {action = "ShoppingCart", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShoppingCart() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:44:22.454 +01:00 [INF] Executed DbCommand (177ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:44:22.504 +01:00 [INF] Executing ViewResult, running view ShoppingCart.
+2024-11-16 09:44:22.532 +01:00 [INF] Executed ViewResult - view ShoppingCart executed in 29.295ms.
+2024-11-16 09:44:22.532 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web) in 360.4485ms
+2024-11-16 09:44:22.533 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:44:22.533 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/ShoppingCart - 200 null text/html; charset=utf-8 396.676ms
+2024-11-16 09:44:22.553 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:44:22.553 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:44:22.583 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 31.2913ms
+2024-11-16 09:44:22.611 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.923ms
+2024-11-16 09:44:24.377 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/Summary - null null
+2024-11-16 09:44:24.388 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:44:24.390 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:44:24.548 +01:00 [INF] Executed DbCommand (111ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:44:24.550 +01:00 [INF] Executing ViewResult, running view Summary.
+2024-11-16 09:44:24.600 +01:00 [INF] Executed ViewResult - view Summary executed in 50.8465ms.
+2024-11-16 09:44:24.600 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 210.364ms
+2024-11-16 09:44:24.600 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:44:24.600 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/Summary - 200 null text/html; charset=utf-8 223.9785ms
+2024-11-16 09:44:24.614 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:44:24.614 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:44:24.617 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 2.8471ms
+2024-11-16 09:44:24.683 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.8949ms
+2024-11-16 09:44:28.519 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7265/Order/Summary - application/x-www-form-urlencoded 531
+2024-11-16 09:44:28.528 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:44:28.539 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary(Lamazon.Services.ViewModels.Order.OrderViewModel) on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:44:28.740 +01:00 [INF] Executed DbCommand (151ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [OrderItems] AS [o0] ON [t].[Id] = [o0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0]
+2024-11-16 09:44:28.955 +01:00 [INF] Executed DbCommand (137ms) [Parameters=[@p11='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Orders] SET [Address] = @p0, [City] = @p1, [Country] = @p2, [IsActive] = @p3, [OrderDate] = @p4, [OrderNumber] = @p5, [PhoneNumber] = @p6, [PostalCode] = @p7, [ShippingUserFullName] = @p8, [TotalPrice] = @p9, [UserId] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+2024-11-16 09:44:29.098 +01:00 [INF] Executed DbCommand (137ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:44:30.937 +01:00 [ERR] Internal Server Error happened
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lamazon.Web.Controllers.OrderController.Summary(OrderViewModel model) in C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web\Controllers\OrderController.cs:line 82
+2024-11-16 09:44:30.958 +01:00 [INF] Executing RedirectResult, redirecting to /Home/Error.
+2024-11-16 09:44:30.958 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 2418.8542ms
+2024-11-16 09:44:30.958 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:44:30.958 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7265/Order/Summary - 302 0 null 2439.7203ms
+2024-11-16 09:44:30.963 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Home/Error - null null
+2024-11-16 09:44:30.967 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:44:30.969 +01:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:44:30.972 +01:00 [INF] Executing ViewResult, running view Error.
+2024-11-16 09:44:30.979 +01:00 [INF] Executed ViewResult - view Error executed in 6.9828ms.
+2024-11-16 09:44:30.979 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web) in 9.6777ms
+2024-11-16 09:44:30.979 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:44:30.979 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Home/Error - 200 null text/html; charset=utf-8 16.0615ms
+2024-11-16 09:44:30.991 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:44:30.991 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:44:30.992 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 1.3357ms
+2024-11-16 09:44:31.006 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.6766ms
+2024-11-16 09:49:54.629 +01:00 [INF] User profile is available. Using 'C:\Users\almir.vuk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-16 09:49:54.856 +01:00 [INF] Now listening on: https://localhost:7265
+2024-11-16 09:49:54.856 +01:00 [INF] Now listening on: http://localhost:5279
+2024-11-16 09:49:54.859 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-16 09:49:54.859 +01:00 [INF] Hosting environment: Development
+2024-11-16 09:49:54.859 +01:00 [INF] Content root path: C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web
+2024-11-16 09:49:55.363 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/ - null null
+2024-11-16 09:49:55.553 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:49:55.590 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:49:56.175 +01:00 [WRN] No store type was specified for the decimal property 'TotalPrice' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:49:56.175 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:49:56.175 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-11-16 09:49:57.401 +01:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price], [p].[ProductCategoryId], [p0].[Id], [p0].[Name]
+FROM [Products] AS [p]
+INNER JOIN [ProductCategories] AS [p0] ON [p].[ProductCategoryId] = [p0].[Id]
+2024-11-16 09:49:57.486 +01:00 [INF] Executing ViewResult, running view Index.
+2024-11-16 09:49:57.706 +01:00 [INF] Executed ViewResult - view Index executed in 222.5626ms.
+2024-11-16 09:49:57.745 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web) in 2153.672ms
+2024-11-16 09:49:57.746 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Index (Lamazon.Web)'
+2024-11-16 09:49:57.816 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:49:57.822 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:49:57.829 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/ - 200 null text/html; charset=utf-8 2468.7116ms
+2024-11-16 09:49:57.831 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 15.4512ms
+2024-11-16 09:49:57.923 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.4168ms
+2024-11-16 09:50:00.910 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/ShoppingCart - null null
+2024-11-16 09:50:00.957 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:50:00.964 +01:00 [INF] Route matched with {action = "ShoppingCart", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ShoppingCart() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:50:01.158 +01:00 [INF] Executed DbCommand (93ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:50:01.216 +01:00 [INF] Executing ViewResult, running view ShoppingCart.
+2024-11-16 09:50:01.246 +01:00 [INF] Executed ViewResult - view ShoppingCart executed in 30.9666ms.
+2024-11-16 09:50:01.246 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web) in 281.8652ms
+2024-11-16 09:50:01.246 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.ShoppingCart (Lamazon.Web)'
+2024-11-16 09:50:01.247 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/ShoppingCart - 200 null text/html; charset=utf-8 337.4896ms
+2024-11-16 09:50:01.264 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:50:01.264 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:50:01.280 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 14.3847ms
+2024-11-16 09:50:01.505 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 241.5387ms
+2024-11-16 09:50:03.109 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Order/Summary - null null
+2024-11-16 09:50:03.128 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:50:03.130 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary() on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:50:03.239 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:50:03.242 +01:00 [INF] Executing ViewResult, running view Summary.
+2024-11-16 09:50:03.289 +01:00 [INF] Executed ViewResult - view Summary executed in 47.3552ms.
+2024-11-16 09:50:03.289 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 158.5982ms
+2024-11-16 09:50:03.289 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:50:03.289 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Order/Summary - 200 null text/html; charset=utf-8 180.7957ms
+2024-11-16 09:50:03.300 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:50:03.300 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:50:03.303 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 3.9711ms
+2024-11-16 09:50:03.367 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.116ms
+2024-11-16 09:50:06.437 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7265/Order/Summary - application/x-www-form-urlencoded 531
+2024-11-16 09:50:06.442 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:50:06.458 +01:00 [INF] Route matched with {action = "Summary", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Summary(Lamazon.Services.ViewModels.Order.OrderViewModel) on controller Lamazon.Web.Controllers.OrderController (Lamazon.Web).
+2024-11-16 09:50:06.569 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[Id] = @__id_0
+) AS [t]
+LEFT JOIN [OrderItems] AS [o0] ON [t].[Id] = [o0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0]
+2024-11-16 09:50:06.737 +01:00 [INF] Executed DbCommand (81ms) [Parameters=[@p11='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Boolean), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Orders] SET [Address] = @p0, [City] = @p1, [Country] = @p2, [IsActive] = @p3, [OrderDate] = @p4, [OrderNumber] = @p5, [PhoneNumber] = @p6, [PostalCode] = @p7, [ShippingUserFullName] = @p8, [TotalPrice] = @p9, [UserId] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+2024-11-16 09:50:06.809 +01:00 [INF] Executed DbCommand (66ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Address], [t].[City], [t].[Country], [t].[IsActive], [t].[OrderDate], [t].[OrderNumber], [t].[PhoneNumber], [t].[PostalCode], [t].[ShippingUserFullName], [t].[TotalPrice], [t].[UserId], [t].[Id0], [t].[Address0], [t].[City0], [t].[Email], [t].[FirstName], [t].[LastName], [t].[Password], [t].[PhoneNumber0], [t].[RoleId], [t].[UserName], [t0].[Id], [t0].[OrderId], [t0].[Price], [t0].[ProductId], [t0].[Quantity], [t0].[Id0], [t0].[Description], [t0].[ImageUrl], [t0].[Name], [t0].[Price0], [t0].[ProductCategoryId]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[Address], [o].[City], [o].[Country], [o].[IsActive], [o].[OrderDate], [o].[OrderNumber], [o].[PhoneNumber], [o].[PostalCode], [o].[ShippingUserFullName], [o].[TotalPrice], [o].[UserId], [u].[Id] AS [Id0], [u].[Address] AS [Address0], [u].[City] AS [City0], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PhoneNumber] AS [PhoneNumber0], [u].[RoleId], [u].[UserName]
+    FROM [Orders] AS [o]
+    INNER JOIN [Users] AS [u] ON [o].[UserId] = [u].[Id]
+    WHERE [o].[IsActive] = CAST(1 AS bit) AND [o].[UserId] = @__userId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[OrderId], [o0].[Price], [o0].[ProductId], [o0].[Quantity], [p].[Id] AS [Id0], [p].[Description], [p].[ImageUrl], [p].[Name], [p].[Price] AS [Price0], [p].[ProductCategoryId]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Products] AS [p] ON [o0].[ProductId] = [p].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t].[Id0], [t0].[Id]
+2024-11-16 09:50:08.772 +01:00 [ERR] Internal Server Error happened for User 5
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lamazon.Web.Controllers.OrderController.Summary(OrderViewModel model) in C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web\Controllers\OrderController.cs:line 82
+2024-11-16 09:50:08.804 +01:00 [INF] Executing RedirectResult, redirecting to /Home/Error.
+2024-11-16 09:50:08.804 +01:00 [INF] Executed action Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web) in 2345.8239ms
+2024-11-16 09:50:08.804 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.OrderController.Summary (Lamazon.Web)'
+2024-11-16 09:50:08.805 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7265/Order/Summary - 302 0 null 2367.8202ms
+2024-11-16 09:50:08.809 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/Home/Error - null null
+2024-11-16 09:50:08.812 +01:00 [INF] Executing endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:50:08.813 +01:00 [INF] Route matched with {action = "Error", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller Lamazon.Web.Controllers.HomeController (Lamazon.Web).
+2024-11-16 09:50:08.816 +01:00 [INF] Executing ViewResult, running view Error.
+2024-11-16 09:50:08.822 +01:00 [INF] Executed ViewResult - view Error executed in 7.2697ms.
+2024-11-16 09:50:08.823 +01:00 [INF] Executed action Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web) in 9.2341ms
+2024-11-16 09:50:08.823 +01:00 [INF] Executed endpoint 'Lamazon.Web.Controllers.HomeController.Error (Lamazon.Web)'
+2024-11-16 09:50:08.823 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/Home/Error - 200 null text/html; charset=utf-8 14.3687ms
+2024-11-16 09:50:08.841 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-16 09:50:08.842 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - null null
+2024-11-16 09:50:08.843 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 1.8351ms
+2024-11-16 09:50:08.870 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.473ms
+2024-11-16 09:54:57.696 +01:00 [ERR] Internal Server Error happened for User 5
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lamazon.Web.Controllers.OrderController.Summary(OrderViewModel model) in C:\Users\almir.vuk\source\repos\sedc-codecademy\rsbawd02-10-project\Lamazon\Lamazon.Web\Controllers\OrderController.cs:line 82

@@ -10,4 +10,6 @@ public interface IOrderService
     OrderViewModel GetActiveOrder(int userId);
 
     OrderViewModel SubmitOrder(OrderViewModel order);
+
+    void SetInactiveOrder(int id);
 }

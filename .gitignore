@@ -399,3 +399,4 @@ FodyWeavers.xsd
 /SEDC.Lamazon.DataAccess/SEDC.Lamazon.DataAccess.csproj
 /SEDC.Lamazon.Web/appsettings.json
 /SEDC.Lamazon.Web/appsettings.Development.json
+/Lamazon/Lamazon.Web/appsettings.Development.json

@@ -7,6 +7,7 @@ using Lamazon.Services.Implementations;
 using Lamazon.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace Lamazon.Web
 {
@@ -16,12 +17,21 @@ namespace Lamazon.Web
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Add serilog
+            builder.Services.AddSerilog(options => 
+            {
+                options.MinimumLevel
+                    .Error()
+                    .WriteTo.File("logs.txt");
+            });
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
             // Add DB Context
             builder.Services.AddDbContext<LamazonDBContext>(options => 
             {
+                // Add connection string here...
             });
 
             builder.Services.AddNotyf(config => 
@@ -65,6 +75,11 @@ namespace Lamazon.Web
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            Stripe.StripeConfiguration.ApiKey = builder
+                .Configuration
+                .GetSection("Stripe:SecretKey")
+                .Get<string>();
 
             app.UseRouting();
 

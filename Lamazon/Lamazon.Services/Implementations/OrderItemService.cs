@@ -1,12 +1,6 @@
 ﻿using Lamazon.DataAccess.Interfaces;
 using Lamazon.Domain.Entities;
 using Lamazon.Services.Interfaces;
-using Microsoft.EntityFrameworkCore.Query.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lamazon.Services.Implementations;
 
@@ -27,6 +21,22 @@ public class OrderItemService : IOrderItemService
 
     public void CreateOrderItem(int productId, int orderId)
     {
+        Order order = _orderRepository.Get(orderId);
+
+        OrderItem existingOrderItem = order
+            .Items
+            .Where(x => x.ProductId == productId)
+            .Where(x => x.OrderId == orderId)
+            .FirstOrDefault();
+
+        if (existingOrderItem != null)
+        {
+            existingOrderItem.Quantity++;
+            _orderItemRepository.Update(existingOrderItem);
+
+            return;
+        }
+
         Product product = _productRepository.Get(productId);
 
         OrderItem orderItem = new OrderItem()
